@@ -1,0 +1,1 @@
+jQuery('.popupbox').colorbox({iframe:true, innerWidth:640, innerHeight:480});
