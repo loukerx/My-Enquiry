@@ -38,7 +38,7 @@ echo "Views=". $_SESSION['toLanguage'];
 <head>
 	<title>Search Results</title>
 <link href='css/search_results.css' rel='stylesheet' type='text/css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){$('#search_field').load('index.php #search_form');});
 </script>
@@ -70,6 +70,20 @@ $(function(){$('#search_field').load('index.php #search_form');});
         function onRestoreOriginal() { 
             alert("The page was reverted to the original language. This message is not part of the widget.");
         }
+  $(document).ready(function(){
+
+          $("a").click(function(){
+          //var myValue = $("#cn").attr('href');
+
+
+
+
+            var td = event.srcElement;
+            console.log(td);
+          //  alert("line number：" + (td.parentElement.rowIndex + 1) + ",content:" + td.innerText); 
+          });
+
+        });
 
     </script>
 
@@ -77,6 +91,17 @@ $(function(){$('#search_field').load('index.php #search_form');});
 
 </head>
 <body>
+<a href="#zh-CHS">Chinese Simplified</a>
+<table id="LanguageMenu" border="0"> 
+<tbody>
+<tr> <td><a tabindex="-1"  href="#ar">Arabic</a></td>
+ <td><a tabindex="-1"  href="#sk">Slovak</a></td></tr>
+<tr> <td><a tabindex="-1" href="#zh-CHS" id ="cn">Chinese Simplified</a></td>
+ <td><a tabindex="-1"  href="#fr">French</a></td></tr>
+<tr> <td><a tabindex="-1" href="#zh-CHT">Chinese Traditional</a></td>
+ <td><a tabindex="-1"  href="#ja">Japanese</a></td></tr>
+</tbody></table>
+
 	<div id="search_field" class="form">
         		
 	</div>
